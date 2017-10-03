@@ -11,9 +11,9 @@
 #import <UICountingLabel/UICountingLabel.h>
 
 typedef NS_ENUM (NSUInteger, PNChartFormatType) {
-    PNChartFormatTypePercent,
-    PNChartFormatTypeDollar,
-    PNChartFormatTypeNone
+	PNChartFormatTypePercent,
+	PNChartFormatTypeDollar,
+	PNChartFormatTypeNone
 };
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -24,36 +24,39 @@ typedef NS_ENUM (NSUInteger, PNChartFormatType) {
 - (void)growChartByAmount:(NSNumber *)growAmount;
 - (void)updateChartByCurrent:(NSNumber *)current;
 - (id)initWithFrame:(CGRect)frame
-              total:(NSNumber *)total
-            current:(NSNumber *)current
-          clockwise:(BOOL)clockwise
-             shadow:(BOOL)hasBackgroundShadow;
+			  total:(NSNumber *)total
+			current:(NSNumber *)current
+		  clockwise:(BOOL)clockwise
+			 shadow:(BOOL)hasBackgroundShadow;
 
 - (id)initWithFrame:(CGRect)frame
-              total:(NSNumber *)total
-            current:(NSNumber *)current
-          clockwise:(BOOL)clockwise
-             shadow:(BOOL)hasBackgroundShadow
-        shadowColor:(UIColor *)backgroundShadowColor;
+			  total:(NSNumber *)total
+			current:(NSNumber *)current
+		  clockwise:(BOOL)clockwise
+			 shadow:(BOOL)hasBackgroundShadow
+		shadowColor:(UIColor *)backgroundShadowColor;
 
 - (id)initWithFrame:(CGRect)frame
-              total:(NSNumber *)total
-            current:(NSNumber *)current
-          clockwise:(BOOL)clockwise
-             shadow:(BOOL)hasBackgroundShadow
-        shadowColor:(UIColor *)backgroundShadowColor
+			  total:(NSNumber *)total
+			current:(NSNumber *)current
+		  clockwise:(BOOL)clockwise
+			 shadow:(BOOL)hasBackgroundShadow
+		shadowColor:(UIColor *)backgroundShadowColor
 displayCountingLabel:(BOOL)displayCountingLabel;
 
 - (id)initWithFrame:(CGRect)frame
-              total:(NSNumber *)total
-            current:(NSNumber *)current
-          clockwise:(BOOL)clockwise
-             shadow:(BOOL)hasBackgroundShadow
-        shadowColor:(UIColor *)backgroundShadowColor
+			  total:(NSNumber *)total
+			current:(NSNumber *)current
+		  clockwise:(BOOL)clockwise
+			 shadow:(BOOL)hasBackgroundShadow
+		shadowColor:(UIColor *)backgroundShadowColor
 displayCountingLabel:(BOOL)displayCountingLabel
   overrideLineWidth:(NSNumber *)overrideLineWidth;
 
 @property (strong, nonatomic) UICountingLabel *countingLabel;
+@property (strong, nonatomic) UILabel *display_spendingLabel;
+@property (strong, nonatomic) UICountingLabel *spendingLabel;
+@property (nonatomic) float currentSpending;
 @property (nonatomic) UIColor *strokeColor;
 @property (nonatomic) UIColor *strokeColorGradientStart;
 @property (nonatomic) NSNumber *total;
@@ -63,6 +66,7 @@ displayCountingLabel:(BOOL)displayCountingLabel
 @property (nonatomic) PNChartFormatType chartType;
 
 
+@property (nonatomic) CAShapeLayer *arrow;
 @property (nonatomic) CAShapeLayer *circle;
 @property (nonatomic) CAShapeLayer *gradientMask;
 @property (nonatomic) CAShapeLayer *circleBackground;
@@ -70,3 +74,4 @@ displayCountingLabel:(BOOL)displayCountingLabel
 @property (nonatomic) BOOL displayCountingLabel;
 
 @end
+
