@@ -30,6 +30,12 @@
 /** Default is 1.0. */
 @property (nonatomic) NSTimeInterval duration;
 
+
+@property (strong, nonatomic) NSString *contentText;
+
+@property (strong, nonatomic) UILabel *contentLabel;
+
 - (void)strokeChart;
 
 @end
+
