@@ -24,6 +24,7 @@ typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
  */
 - (void)strokeChart;
 
+@property (nonatomic) NSArray *headerLabels;
 @property (nonatomic) NSArray *xLabels;
 @property (nonatomic) NSArray *yLabels;
 @property (nonatomic) NSArray *yValues;
@@ -67,6 +68,8 @@ typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
 
 @property (nonatomic) CGFloat labelMarginTop;
 
+@property (nonatomic) CGFloat indexLeftMargin;
+
 /** Background color of all bars in the chart. */
 @property (nonatomic) UIColor * barBackgroundColor;
 
@@ -96,4 +99,11 @@ typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
 
 @property (nonatomic, retain) id<PNChartDelegate> delegate;
 
+/* add */
+@property (nonatomic) CGFloat targetValue;
+@property (nonatomic) CGFloat targetY;
+@property (nonatomic) UIColor *targetColor;
+- (void)strokeLine;
+
 @end
+
