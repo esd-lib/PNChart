@@ -105,7 +105,7 @@ displayCountingLabel:(BOOL)displayCountingLabel
 		
 		//*************************************************arrow
 		_arrow = [CAShapeLayer layer];
-		_arrow.fillColor = [UIColor whiteColor].CGColor;
+		_arrow.fillColor = [UIColor blackColor].CGColor;
 		_arrow.zPosition     = 2;
 		CGRect bounds = self.bounds;
 		CGFloat radius = [_lineWidth floatValue]/3;
